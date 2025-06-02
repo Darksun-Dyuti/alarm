@@ -1,23 +1,19 @@
-# Import Required Library
 from tkinter import *
 import datetime
 import time
 import winsound
 from threading import *
 
-# Create Object
 root = Tk()
 
-# Set geometry
 root.geometry("400x200")
 
-# Use Threading
 def Threading():
 	t1=Thread(target=alarm)
 	t1.start()
 
 def alarm():
-	# Infinite Loop
+	
 	while True:
 		# Set Alarm
 		set_alarm_time = f"{hour.get()}:{minute.get()}:{second.get()}"
